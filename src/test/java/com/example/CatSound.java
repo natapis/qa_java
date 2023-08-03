@@ -13,6 +13,7 @@ public class CatSound {
     Feline feline;
     @Test
     public void checkSoundCat(){
+        Feline feline = new Feline();
         Cat cat = new Cat(feline);
         String actual = cat.getSound();
         String expected = "Мяу";
