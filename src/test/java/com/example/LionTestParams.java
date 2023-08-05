@@ -28,7 +28,7 @@ public class LionTestParams {
         return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
-                {"Test", null},
+                {"Test", false},
         };
     }
     @Test
