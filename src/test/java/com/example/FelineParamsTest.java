@@ -6,7 +6,7 @@ import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 
-public class FelineTestParams {
+public class FelineParamsTest {
     @Parameterized.Parameter
     public int i;
     @Parameterized.Parameter(1)

@@ -6,9 +6,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
-
 @RunWith(MockitoJUnitRunner.class)
-
 public class CatTest {
     @Mock
     Feline feline;
@@ -19,7 +17,6 @@ public class CatTest {
         String expected = "Мяу";
         Assert.assertEquals(expected, actual);
     }
-
     @Test
     public void getFoodTest(){
         Cat cat = new Cat(feline);

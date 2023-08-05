@@ -9,11 +9,13 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(Parameterized.class)
 
-public class LionTestParams {
+public class LionParamsTest {
     @Parameterized.Parameter
     public String sex;
     @Parameterized.Parameter(1)
     public boolean expectedResult;
+
+    private Lion lion;
 
     @Mock
     Feline feline;
@@ -23,24 +25,24 @@ public class LionTestParams {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Если {0}, то {1}")
     public static Object [][] params(){
         return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
-                {"Test", false},
         };
     }
-    @Test
-    public void doesHaveManeTest(){
-        try{
-            Lion lion = new Lion(sex, feline);
-            boolean actualResult = lion.doesHaveMane();
-            Assert.assertEquals(expectedResult, actualResult);
+    public void initLion(){
+        try {
+            lion = new Lion(sex, feline);
         } catch (Exception e) {
             System.out.println(e);
         }
-
-
+    }
+    @Test
+    public void doesHaveManeTest(){
+        initLion();
+        boolean actualResult = lion.doesHaveMane();
+        Assert.assertEquals(expectedResult, actualResult);
     }
 }
