@@ -12,7 +12,7 @@ public class FelineParamsTest {
     @Parameterized.Parameter(1)
     public int expectedResult;
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Количество котят. Тестовые данные: {0} - {1}")
     public static Object[][] params(){
         return new Object[][]{
                 {2,2},
