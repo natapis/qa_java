@@ -1,4 +1,5 @@
 package com.example;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,15 +14,15 @@ public class FelineParamsTest {
     public int expectedResult;
 
     @Parameterized.Parameters(name = "Количество котят. Тестовые данные: {0} - {1}")
-    public static Object[][] params(){
+    public static Object[][] params() {
         return new Object[][]{
-                {2,2},
-                {3,3},
+                {2, 2},
+                {3, 3},
         };
     }
 
     @Test
-    public void getKittensTest(){
+    public void getKittensTest() {
         Feline feline = new Feline();
         int actualResult = feline.getKittens(i);
         Assert.assertEquals(expectedResult, actualResult);
