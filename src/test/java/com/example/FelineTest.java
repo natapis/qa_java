@@ -15,14 +15,10 @@ public class FelineTest {
     private Feline feline;
 
     @Test
-    public void eatMeatTest() {
-        try {
-            List<String> actualResult = feline.eatMeat();
-            List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
-            Assert.assertEquals(expectedResult, actualResult);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+    public void eatMeatTest() throws Exception {
+        List<String> actualResult = feline.eatMeat();
+        List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
